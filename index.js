@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 connectDB();
 
-const domainAllow = ['http://localhost:5173'];
+const domainAllow = [process.env.FRONT_URL];
 
 const corsOptions = {
     origin: (origin, cb)=>{
